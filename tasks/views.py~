@@ -6,7 +6,7 @@ from .models import Task
 
 class TaskListView(ListView):
     model = Task
-    template_name = 'templates/task_list.html'
+    template_name = 'task_list.html'
     context_object_name = 'tasks'
 
 
