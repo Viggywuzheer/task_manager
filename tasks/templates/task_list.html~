@@ -9,10 +9,10 @@
 </head>
 <body>
 	<h1>Task List</h1>
-	<ul>
+	<u1>
 		{% for task in tasks %}
 			<li>{{ task.title }} - {{ task.status }}</li>
 		{% endfor %}
-	</ul>
+	</u1>
 </body>
 </html>
