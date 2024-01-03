@@ -1,18 +1,17 @@
 <!-- tasks/templates/task_list.html -->
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Task List</title>
-</head>
-<body>
-	<h1>Task List</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Task List{% endblock %}
+
+{% block content %}
 	<h1>Task List</h1>
 	<ul>
 		{% for task in tasks %}
-			<li>{{ task.title }} - {{ task.status }}</li>
+			<li>
+				{{ task.title }} - {{ task.status }}
+				[<a href="{% url 'task-edit' pk=task.pk %}">Edit</a>]
+				[<a href="{% url 'task-delete' pk=task.pk %}">Delete</a>
+			</li>
 		{% endfor %}
 	</ul>
-</body>
-</html>
+{% endblock %}

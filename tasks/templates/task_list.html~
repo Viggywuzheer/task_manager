@@ -1,18 +1,13 @@
 <!-- tasks/templates/task_list.html -->
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Task List</title>
-</head>
-<body>
-	<h1>Task List</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Task List{% endblock %}
+
+{% block content %}
 	<h1>Task List</h1>
-	<u1>
+	<ul>
 		{% for task in tasks %}
 			<li>{{ task.title }} - {{ task.status }}</li>
 		{% endfor %}
-	</u1>
-</body>
-</html>
+	</ul>
+{% endblock %}
